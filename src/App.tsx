@@ -1,27 +1,32 @@
-import React, { StrictMode } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Footer from "./components/Footer";
-import NavigationBar from "./components/NavigationBar";
-import Page404 from "./Page404";
-import AboutPage from "./pages/AboutPage";
-import MainPage from "./pages/MainPage";
-import ResumePage from "./pages/ResumePage";
 
-const App: React.FC = () => {
+import { ExperienceSection } from "@/components/experience-section";
+import { HeroSection } from "@/components/hero-section";
+import { ModeToggle } from "@/components/mode-toggle";
+import { ProjectsCarousel } from "@/components/projects-carousel";
+import { SiteFooter } from "@/components/site-footer";
+import { Separator } from "@/components/ui/separator";
+import { ThemeProvider } from "@/hooks/theme-provider";
+
+function App() {
   return (
-    <StrictMode>
-      <BrowserRouter>
-        <NavigationBar />
-        <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/resume" element={<ResumePage />} />
-          <Route path="*" element={<Page404 />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
-    </StrictMode>
+    <ThemeProvider defaultTheme="system" storageKey="proftolio-ui-theme">
+      <div className="min-h-screen bg-background">
+        <div className="fixed top-4 right-4 z-50">
+          <ModeToggle />
+        </div>
+
+        <main className="max-w-6xl mx-auto px-6 py-8 space-y-12">
+          <HeroSection />
+          <Separator />
+          <ProjectsCarousel />
+          <Separator />
+          <ExperienceSection />
+        </main>
+
+        <SiteFooter />
+        </div>
+    </ThemeProvider>
   );
-};
+}
 
 export default App;

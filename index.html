@@ -2,19 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Orel's Portfolio Website</title>
-    <link rel="shortcut icon" type="image/svg" href="/favicon.svg" />
-    <link href="css/style.css" rel="stylesheet" />
-    <link href="css/error.css" rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Chivo&family=Overpass&display=swap"
-      rel="stylesheet"
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'nonce-__NONCE__'; worker-src 'self' blob:; style-src 'self' 'nonce-__NONCE__' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data:; connect-src 'self' ws: wss:; object-src 'none'; base-uri 'self'; upgrade-insecure-requests;"
     />
+    <title>Orel</title>
   </head>
-  <body class="hide-scroll">
-    <div id="root">Loading...</div>
-    <script type="module" src="./src/Main.tsx"></script>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

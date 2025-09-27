@@ -7,7 +7,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { Separator } from "@/components/ui/separator";
 import { ThemeProvider } from "@/hooks/theme-provider";
 
-function App() {
+export default function App() {
   return (
     <ThemeProvider defaultTheme="system" storageKey="proftolio-ui-theme">
       <div className="min-h-screen bg-background">
@@ -15,7 +15,7 @@ function App() {
           <ModeToggle />
         </div>
 
-        <main className="max-w-6xl mx-auto px-6 py-8 space-y-12">
+        <main className="max-w-6xl mx-auto px-6 py-8 space-y-6">
           <HeroSection />
           <Separator />
           <ProjectsCarousel />
@@ -24,9 +24,8 @@ function App() {
         </main>
 
         <SiteFooter />
-        </div>
+      </div>
     </ThemeProvider>
   );
 }
 
-export default App;

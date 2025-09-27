@@ -6,13 +6,13 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { FileText, Github, Linkedin, Mail } from "lucide-react";
+import { FileText, Github, Linkedin } from "lucide-react";
 
 export function HeroSection() {
   return (
     <section className="text-center space-y-6">
       <Avatar className="w-24 h-24 mx-auto">
-        <AvatarImage src="/profile.jpg" alt="Orel Ben Neriah" />
+        <AvatarImage src="/profile.jpg" alt="Orel Ben Neriah" loading="lazy" />
         <AvatarFallback className="text-xl bg-primary text-primary-foreground">
           OBN
         </AvatarFallback>
@@ -20,11 +20,11 @@ export function HeroSection() {
 
       <div className="space-y-2">
         <h2 className="text-3xl font-bold text-foreground">Orel Ben Neriah</h2>
-        <p className="text-xl text-muted-foreground">Full Stack Developer</p>
+        <p className="text-xl text-muted-foreground">Awesome Person - Software Developer</p>
         <p className="text-muted-foreground max-w-4xl mx-auto">
-          I'm a software developer passionate about building modern, efficient
-          applications. Recent co-founder at Stride Software, specializing in
-          full-stack development and AI-powered solutions.
+          I'm a software developer with lots of interest. My experience is mainly in web-development, but I love to learn more about security, system coding and fun algorithms.
+          Outside of software development, I lift, run, and play soccer sometimes. I also like video games, hot chocolate, and try to drink/make amazing coffee.
+          Feel free to reach out to talk about anything tech or non-tech!
         </p>
       </div>
 
@@ -69,21 +69,8 @@ export function HeroSection() {
           <Tooltip>
             <TooltipTrigger asChild>
               <Button variant="ghost" size="icon" asChild>
-                <a href="mailto:contactorelbn@gmail.com" aria-label="Email">
-                  <Mail className="w-5 h-5" />
-                </a>
-              </Button>
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Email</p>
-            </TooltipContent>
-          </Tooltip>
-
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button variant="ghost" size="icon" asChild>
                 <a
-                  href="/resume.pdf"
+                  href="/Orel's Resume - No Contant Info.pdf"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Resume"

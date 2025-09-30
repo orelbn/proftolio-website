@@ -1,19 +1,18 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 
-interface ExperienceCardProps {
+type ExperienceCardProps = {
   title: string;
   company: string;
   duration: string;
-  description: string;
-  isFirst?: boolean;
-}
+  children: React.ReactNode;
+};
 
-export function ExperienceCard({ 
-  title, 
-  company, 
-  duration, 
-  description, 
+export function ExperienceCard({
+  title,
+  company,
+  duration,
+  children,
 }: ExperienceCardProps) {
   return (
     <Card className="py-4">
@@ -23,9 +22,10 @@ export function ExperienceCard({
           <Badge variant="outline">{duration}</Badge>
         </div>
         <p className="text-muted-foreground -translate-y-1">{company}</p>
-        <p className="text-sm text-muted-foreground leading-relaxed">
-          {description}
-        </p>
+
+        <div className="text-sm text-muted-foreground leading-relaxed">
+          {children}
+        </div>
       </CardContent>
     </Card>
   );

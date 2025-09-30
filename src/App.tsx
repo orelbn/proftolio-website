@@ -1,4 +1,3 @@
-
 import { ExperienceSection } from "@/components/experience-section";
 import { HeroSection } from "@/components/hero-section";
 import { ModeToggle } from "@/components/mode-toggle";
@@ -28,4 +27,3 @@ export default function App() {
     </ThemeProvider>
   );
 }
-

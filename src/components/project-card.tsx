@@ -30,15 +30,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
     github: Github,
   }[project.icon];
 
-
-
   return (
     <Card>
       <CardContent className="flex flex-col">
         <div className="mb-4 flex-shrink-0">
-          <CardTitle className="text-xl mb-3">
-            {project.title}
-          </CardTitle>
+          <CardTitle className="text-xl mb-3">{project.title}</CardTitle>
           <p className="text-muted-foreground mb-3 leading-relaxed">
             {project.description}
           </p>
@@ -50,17 +46,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
             ))}
           </div>
           {project.href && (
-            <Button
-              variant="outline"
-              size="sm"
-              className="w-fit"
-              asChild
-            >
-              <a
-                href={project.href}
-                target="_blank"
-                rel="noreferrer"
-              >
+            <Button variant="outline" size="sm" className="w-fit" asChild>
+              <a href={project.href} target="_blank" rel="noreferrer">
                 View on GitHub
               </a>
             </Button>
@@ -80,8 +67,14 @@ export function ProjectCard({ project }: ProjectCardProps) {
               />
             </div>
           ) : project.customImage ? (
-            <div className="bg-muted rounded-lg relative overflow-hidden group w-full h-full cursor-pointer" 
-                 onClick={project.href ? () => window.open(project.href, '_blank') : undefined}>
+            <div
+              className="bg-muted rounded-lg relative overflow-hidden group w-full h-full cursor-pointer"
+              onClick={
+                project.href
+                  ? () => window.open(project.href, "_blank")
+                  : undefined
+              }
+            >
               <img
                 src={project.customImage}
                 alt={project.title}
@@ -90,9 +83,17 @@ export function ProjectCard({ project }: ProjectCardProps) {
               />
             </div>
           ) : (
-            <div className="bg-muted rounded-lg relative overflow-hidden group w-full h-full cursor-pointer" 
-                 onClick={project.href ? () => window.open(project.href, '_blank') : undefined}>
-              <div className={`absolute inset-0 flex items-center justify-center bg-gradient-to-br ${project.gradientFrom} ${project.gradientTo}`}>
+            <div
+              className="bg-muted rounded-lg relative overflow-hidden group w-full h-full cursor-pointer"
+              onClick={
+                project.href
+                  ? () => window.open(project.href, "_blank")
+                  : undefined
+              }
+            >
+              <div
+                className={`absolute inset-0 flex items-center justify-center bg-gradient-to-br ${project.gradientFrom} ${project.gradientTo}`}
+              >
                 <IconComponent className={`w-20 h-20 ${project.iconColor}`} />
               </div>
             </div>

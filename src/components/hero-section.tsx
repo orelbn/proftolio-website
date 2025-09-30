@@ -20,11 +20,15 @@ export function HeroSection() {
 
       <div className="space-y-2">
         <h2 className="text-3xl font-bold text-foreground">Orel Ben Neriah</h2>
-        <p className="text-xl text-muted-foreground">Awesome Person - Software Developer</p>
+        <p className="text-xl text-muted-foreground">
+          Awesome Person - Software Developer
+        </p>
         <p className="text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-          I'm a software developer focused on the web, always curious about security, low-level programming, and making things fast.
+          I'm a software developer focused on the web, always curious about
+          security, low-level programming, and making things fast.
           <br />
-          Outside of coding, I lift, run, play soccer, and chase great coffee.  I'm also into video games and specialty hot chocolates.
+          Outside of coding, I lift, run, play soccer, and chase great coffee.
+          I'm also into video games and specialty hot chocolates.
           <br />
           Open to chatting about tech or anything else.
         </p>

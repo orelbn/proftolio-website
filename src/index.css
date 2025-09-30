@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -9,10 +9,12 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  
+
   /* Font family */
-  --font-family-sans: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-  
+  --font-family-sans:
+    "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+    Arial, sans-serif;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -49,13 +51,13 @@
 :root {
   --radius: 0.65rem;
   --background: oklch(0.983 0.012 67.7);
-  --foreground: oklch(0.310 0.023 27.2);
+  --foreground: oklch(0.31 0.023 27.2);
   --card: oklch(0.966 0.021 60.8);
   --card-foreground: oklch(0.278 0.026 38.1);
   --popover: oklch(0.976 0.014 57.6);
   --popover-foreground: oklch(0.278 0.026 38.1);
   --primary: oklch(0.665 0.138 40.3);
-  --primary-foreground: oklch(1.000 0.000 89.9);
+  --primary-foreground: oklch(1 0 89.9);
   --secondary: oklch(0.603 0.105 40.2);
   --secondary-foreground: oklch(0.981 0.011 54.5);
   --muted: oklch(0.889 0.029 57.3);
@@ -68,47 +70,59 @@
   --input: oklch(0.981 0.011 54.5);
   --ring: oklch(0.783 0.115 57.3);
   --chart-1: oklch(0.756 0.078 68.1);
-  --chart-2: oklch(0.642 0.151 31.0);
+  --chart-2: oklch(0.642 0.151 31);
   --chart-3: oklch(0.853 0.133 85.5);
   --chart-4: oklch(0.586 0.091 48.7);
-  --chart-5: oklch(0.440 0.095 35.7);
+  --chart-5: oklch(0.44 0.095 35.7);
   --sidebar: oklch(0.968 0.011 63.4);
-  --sidebar-foreground: oklch(0.310 0.023 27.2);
+  --sidebar-foreground: oklch(0.31 0.023 27.2);
   --sidebar-primary: oklch(0.665 0.138 40.3);
-  --sidebar-primary-foreground: oklch(1.000 0.000 89.9);
+  --sidebar-primary-foreground: oklch(1 0 89.9);
   --sidebar-accent: oklch(0.603 0.105 40.2);
   --sidebar-accent-foreground: oklch(0.981 0.011 54.5);
   --sidebar-border: oklch(0.892 0.021 56.1);
   --sidebar-ring: oklch(0.783 0.115 57.3);
 }
 .dark {
-  --background: oklch(24.3% 0.027 257);      /* Dark, desaturated navy */
-  --foreground: oklch(93.1% 0.012 255);      /* Soft off-white */
+  --background: oklch(24.3% 0.027 257); /* Dark, desaturated navy */
+  --foreground: oklch(93.1% 0.012 255); /* Soft off-white */
 
-  --card: oklch(32.7% 0.033 255);           /* Lighter slate blue for cards */
+  --card: oklch(32.7% 0.033 255); /* Lighter slate blue for cards */
   --card-foreground: oklch(93.1% 0.012 255);
 
-  --popover: oklch(24.3% 0.027 257);        /* Popovers match the background for a seamless look */
+  --popover: oklch(
+    24.3% 0.027 257
+  ); /* Popovers match the background for a seamless look */
   --popover-foreground: oklch(93.1% 0.012 255);
 
-  --primary: oklch(72% 0.12 237);            /* Crisp, clear sky blue accent */
-  --primary-foreground: oklch(22% 0.03 257);   /* Dark navy for high contrast on primary buttons */
+  --primary: oklch(72% 0.12 237); /* Crisp, clear sky blue accent */
+  --primary-foreground: oklch(
+    22% 0.03 257
+  ); /* Dark navy for high contrast on primary buttons */
 
-  --secondary: oklch(45% 0.04 256);          /* Muted, darker blue for secondary actions */
+  --secondary: oklch(
+    45% 0.04 256
+  ); /* Muted, darker blue for secondary actions */
   --secondary-foreground: oklch(93.1% 0.012 255);
 
-  --muted: oklch(32.7% 0.033 255);           /* Muted elements use the card color */
-  --muted-foreground: oklch(72.7% 0.019 256);/* Lighter gray for less important text */
+  --muted: oklch(32.7% 0.033 255); /* Muted elements use the card color */
+  --muted-foreground: oklch(
+    72.7% 0.019 256
+  ); /* Lighter gray for less important text */
 
-  --accent: oklch(38% 0.035 255);            /* A slightly brighter slate for hover states */
+  --accent: oklch(
+    38% 0.035 255
+  ); /* A slightly brighter slate for hover states */
   --accent-foreground: oklch(93.1% 0.012 255);
 
-  --destructive: oklch(65% 0.2 20);          /* A clear, but not overly bright, cool red */
-  --success: oklch(68% 0.14 155);            /* Desaturated, cool-toned green */
+  --destructive: oklch(
+    65% 0.2 20
+  ); /* A clear, but not overly bright, cool red */
+  --success: oklch(68% 0.14 155); /* Desaturated, cool-toned green */
 
-  --border: oklch(38% 0.035 255);            /* Borders are slightly lighter than cards */
-  --input: oklch(38% 0.035 255);             /* Input fields match the border color */
-  --ring: oklch(74% 0.13 237);               /* A brighter blue for focus rings */
+  --border: oklch(38% 0.035 255); /* Borders are slightly lighter than cards */
+  --input: oklch(38% 0.035 255); /* Input fields match the border color */
+  --ring: oklch(74% 0.13 237); /* A brighter blue for focus rings */
 
   /* Charts - Keeping the original vibrant chart colors as they work well on dark backgrounds */
   --chart-1: oklch(0.696 0.084 53.6);
@@ -118,38 +132,37 @@
   --chart-5: oklch(0.463 0.107 37.3);
 
   /* Sidebar - Aligns with the card styles for consistency */
-  --sidebar: oklch(0.20 0.018 80);
+  --sidebar: oklch(0.2 0.018 80);
   --sidebar-foreground: oklch(0.97 0.01 90);
   --sidebar-primary: oklch(0.75 0.15 85);
-  --sidebar-primary-foreground: oklch(0.20 0.025 80);
-  --sidebar-accent: oklch(0.30 0.022 250);
+  --sidebar-primary-foreground: oklch(0.2 0.025 80);
+  --sidebar-accent: oklch(0.3 0.022 250);
   --sidebar-accent-foreground: oklch(0.97 0.01 90);
   --sidebar-border: oklch(0.28 0.02 80);
   --sidebar-ring: oklch(0.78 0.16 85);
 }
 
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
-  
+
   html {
     font-family: var(--font-family-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
   }
-  
+
   body {
     @apply bg-background text-foreground;
   }
-  
+
   /* Optimize touch interactions for better scroll performance */
   [data-slot="carousel-content"] {
     touch-action: pan-x;
   }
-  
+
   /* Prevent scroll blocking on carousel interactions */
   [role="region"][aria-roledescription="carousel"] {
     touch-action: manipulation;

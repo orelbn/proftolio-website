@@ -72,7 +72,7 @@ export function HeroSection() {
             <TooltipTrigger asChild>
               <Button variant="ghost" size="icon" asChild>
                 <a
-                  href="/Orel's Resume - No Contant Info.pdf"
+                  href="/Orel's Resume.pdf"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Resume"

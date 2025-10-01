@@ -22,63 +22,9 @@ export function StrideExperience() {
           added a math variable in the future it can be detected.
         </p>
         <p>
-          Another fun and interesting challenge was implementing editor
-          navigation between regular text and custom components. Here is a
-          function I wrote:
+          We used great open-source libraries as part of the project I encourage
+          you to check them out:
         </p>
-        <div className="relative max-w-2xl">
-          <div className="absolute top-2 right-2 text-xs text-muted-foreground bg-muted px-2 py-1 rounded">
-            typescript
-          </div>
-          <pre className="bg-muted/50 border rounded-lg p-4 text-xs overflow-x-auto whitespace-pre-wrap break-words">
-            <code className="text-foreground leading-relaxed">
-              {`/**
- * Checks if the next MathFieldNode is close enough to the current selection 
- * based on the direction of movement.
- * @param next - The next MathFieldNode.
- * @param moving - The direction of movement ('up' or 'down').
- * @returns True if the next MathFieldNode is close enough, false otherwise.
- */
-function isCloseEnough(next: MathFieldNode, moving: 'up' | 'down') {
-  const isMovingUp = moving === 'up';
-  const selectionY = getSelectionY(isMovingUp ? 'top' : 'bottom');
-
-  if (!selectionY) return false;
-  const ref = next.getRef();
-
-  const mathFieldY = ref.getBoundingClientRect()[isMovingUp ? 'bottom' : 'top'];
-
-  // Space calculation in pixels (accounts for zoom)
-  const spaceBetween = isMovingUp
-    ? selectionY - mathFieldY
-    : mathFieldY - selectionY;
-
-  // Threshold chosen through testing - adjust with padding/margin changes
-  const AccountForPossibleRowBelow = 30;
-
-  return spaceBetween < AccountForPossibleRowBelow;
-}
-
-function getSelectionY(section: 'top' | 'bottom') {
-  const selection = window.getSelection();
-  const range = selection.getRangeAt(0).cloneRange();
-  let y: number = 0;
-  
-  if (range.getClientRects) {
-    const rects = range.getClientRects();
-    if (rects.length > 0) {
-      const rect = section === 'top' ? rects[0] : rects[rects.length - 1];
-      y = rect[section];
-    }
-  }
-
-  return y;
-}`}
-            </code>
-          </pre>
-        </div>
-        We used great open-source libraries as part of the project I encourage
-        you to check them out:
         <ul className="list-disc list-inside space-y-1 mt-2">
           <li>
             <a

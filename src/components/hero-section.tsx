@@ -23,12 +23,11 @@ export function HeroSection() {
         <p className="text-xl text-muted-foreground">
           Awesome Person - Software Developer
         </p>
-        <p className="text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+        <p className="text-muted-foreground max-w-2xl mx-auto text-balance">
           I'm a software developer focused on the web, always curious about
           security, low-level programming, and making things fast.
           <br />
           Outside of coding, I lift, run, play soccer, and chase great coffee.
-          I'm also into video games and specialty hot chocolates.
           <br />
           Open to chatting about tech or anything else.
         </p>

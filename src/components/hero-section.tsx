@@ -50,6 +50,12 @@ export function HeroSection() {
             highlightClassName="text-foreground font-bold"
           />
         </div>
+        <p className="max-w-2xl mx-auto text-muted-foreground text-balance pt-4">
+          With a background in Criminology and Computer Science, I bring a
+          unique perspective to tech. When I'm not coding, you'll find me
+          running, lifting weights, playing soccer, or brewing a great cup of
+          coffee.
+        </p>
       </div>
 
       <TooltipProvider>

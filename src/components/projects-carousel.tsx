@@ -34,7 +34,7 @@ export function ProjectsCarousel() {
         <CarouselContent>
           {projects.map((project) => (
             <CarouselItem key={project.id}>
-              <ProjectCard project={project} />
+              <ProjectCard {...project} />
             </CarouselItem>
           ))}
         </CarouselContent>

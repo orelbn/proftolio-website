@@ -1,6 +1,4 @@
-import type { Project } from "@/components/project-card";
-
-export const projects: Project[] = [
+export const projects = [
   {
     id: "stride",
     title: "Stride",
@@ -24,7 +22,6 @@ export const projects: Project[] = [
     iconColor: "text-purple-500",
     youtubeId: "9GODaWLucRY",
     link: "https://shenko.ai",
-    linkText: "Check it out: ",
   },
   {
     id: "aws-room-booking",
@@ -51,3 +48,5 @@ export const projects: Project[] = [
     customImage: "/orel-github.png",
   },
 ];
+
+export type Project = (typeof projects)[number];

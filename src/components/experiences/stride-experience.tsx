@@ -30,62 +30,56 @@ export function StrideExperience() {
           We used great open-source libraries as part of our projects I
           encourage you to check them out:
         </p>
-        <ul className="list-disc list-inside space-y-1 mt-2">
-          <li>
-            <a
-              href="https://lexical.dev/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Lexical
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://mathlive.io/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              MathLive
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://mathjs.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Math.js
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://electronjs.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Electron
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://ai-sdk.dev/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              AI SDK
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://better-auth.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              BETTER-AUTH
-            </a>
-          </li>
-        </ul>
+        <div className="flex flex-wrap gap-4 mt-2">
+          <a
+            href="https://lexical.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-foreground transition-colors underline decoration-muted-foreground/50 hover:decoration-foreground"
+          >
+            Lexical
+          </a>
+          <a
+            href="https://mathlive.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-foreground transition-colors underline decoration-muted-foreground/50 hover:decoration-foreground"
+          >
+            MathLive
+          </a>
+          <a
+            href="https://mathjs.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-foreground transition-colors underline decoration-muted-foreground/50 hover:decoration-foreground"
+          >
+            Math.js
+          </a>
+          <a
+            href="https://electronjs.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-foreground transition-colors underline decoration-muted-foreground/50 hover:decoration-foreground"
+          >
+            Electron
+          </a>
+          <a
+            href="https://ai-sdk.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-foreground transition-colors underline decoration-muted-foreground/50 hover:decoration-foreground"
+          >
+            AI SDK
+          </a>
+          <a
+            href="https://better-auth.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-foreground transition-colors underline decoration-muted-foreground/50 hover:decoration-foreground"
+          >
+            BETTER-AUTH
+          </a>
+        </div>
       </div>
     </ExperienceCard>
   );

@@ -9,7 +9,7 @@ export function BCRegistriesExperience() {
     >
       <div className="space-y-2">
         <p>
-          Worked on the modernization project of BC Registries, focusing on
+          I was part of the modernization project in BC Registries, focusing on
           upgrading their technology stack. Implemented new registration flows
           for manufactured homes and personal property registries.
         </p>
@@ -21,7 +21,7 @@ export function BCRegistriesExperience() {
           very intuitive and I liked the way that you didn't have to manage
           state as much as in React. I also enjoyed how you can declare your
           styling in the same file as your component, and that they already had
-          created their own state management library that you can opt into.
+          standard state management library that you can opt into.
         </p>
         <p>
           I was lucky to be part of an incredible team. We had project managers,

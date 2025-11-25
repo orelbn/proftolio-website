@@ -15,17 +15,25 @@ export function ExperienceCard({
   children,
 }: ExperienceCardProps) {
   return (
-    <Card className="py-4">
-      <CardContent>
-        <div className="flex justify-between items-start">
-          <h4 className="font-semibold text-foreground text-xl">{title}</h4>
-          <Badge className="text-sm">{duration}</Badge>
+    <Card className="py-6 border-2 shadow-lg transition-all hover:border-primary/20">
+      <CardContent className="space-y-4">
+        <div className="flex flex-col sm:flex-row justify-between items-start gap-2">
+          <div className="space-y-1">
+            <h4 className="font-bold text-2xl text-foreground drop-shadow-sm tracking-tight">
+              {title}
+            </h4>
+            <p className="text-lg font-medium text-muted-foreground/80">
+              {company}
+            </p>
+          </div>
+          <Badge variant="secondary" className="text-sm px-3 py-1 shadow-sm">
+            {duration}
+          </Badge>
         </div>
-        <p className="text-muted-foreground -translate-y-1 text-lg">
-          {company}
-        </p>
 
-        <div className="text-muted-foreground leading-relaxed">{children}</div>
+        <div className="text-muted-foreground text-lg leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.1)] dark:drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
+          {children}
+        </div>
       </CardContent>
     </Card>
   );

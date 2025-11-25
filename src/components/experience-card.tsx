@@ -18,14 +18,14 @@ export function ExperienceCard({
     <Card className="py-4">
       <CardContent>
         <div className="flex justify-between items-start">
-          <h4 className="font-semibold text-foreground">{title}</h4>
-          <Badge variant="outline">{duration}</Badge>
+          <h4 className="font-semibold text-foreground text-xl">{title}</h4>
+          <Badge className="text-sm">{duration}</Badge>
         </div>
-        <p className="text-muted-foreground -translate-y-1">{company}</p>
+        <p className="text-muted-foreground -translate-y-1 text-lg">
+          {company}
+        </p>
 
-        <div className="text-sm text-muted-foreground leading-relaxed">
-          {children}
-        </div>
+        <div className="text-muted-foreground leading-relaxed">{children}</div>
       </CardContent>
     </Card>
   );

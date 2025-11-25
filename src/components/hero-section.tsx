@@ -6,7 +6,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { FileText, Github, Linkedin } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 
 export function HeroSection() {
   return (
@@ -21,11 +21,11 @@ export function HeroSection() {
       <div className="space-y-2">
         <h2 className="text-3xl font-bold text-foreground">Orel Ben Neriah</h2>
         <p className="text-xl text-muted-foreground">
-          Awesome Person - Software Developer
+          Fullstack Software Developer
         </p>
-        <p className="text-muted-foreground max-w-2xl mx-auto text-balance">
-          I'm a software developer focused on the web, always curious about
-          security, low-level programming, and making things fast.
+        <p className=" text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
+          I'm a focused on the web, always curious about security, low-level
+          programming, and making things fast.
           <br />
           Outside of coding, I lift, run, play soccer, and chase great coffee.
           <br />
@@ -68,24 +68,6 @@ export function HeroSection() {
             </TooltipTrigger>
             <TooltipContent>
               <p>LinkedIn</p>
-            </TooltipContent>
-          </Tooltip>
-
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button variant="ghost" size="icon" asChild>
-                <a
-                  href="/Orel's Resume.pdf"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="Resume"
-                >
-                  <FileText className="w-5 h-5" />
-                </a>
-              </Button>
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Resume</p>
             </TooltipContent>
           </Tooltip>
         </div>

@@ -1,105 +1,101 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardTitle } from "@/components/ui/card";
-import { Github, Image, Play } from "lucide-react";
+import type { Project } from "@/data/projects";
+import { Github, Globe } from "lucide-react";
 
-export interface Project {
-  id: string;
-  title: string;
-  description: string;
-  technologies: string[];
-  type: "demo" | "live" | "screenshots" | "portfolio";
-  isWinner?: boolean;
-  icon: "image" | "play" | "github";
-  gradientFrom: string;
-  gradientTo: string;
-  iconColor: string;
-  href?: string;
-  youtubeId?: string;
-  customImage?: string;
-}
-
-interface ProjectCardProps {
-  project: Project;
-}
-
-export function ProjectCard({ project }: ProjectCardProps) {
-  const IconComponent = {
-    image: Image,
-    play: Play,
-    github: Github,
-  }[project.icon];
-
+export function ProjectCard({
+  youtubeId,
+  customImage,
+  description,
+  technologies,
+  title,
+  href,
+  link,
+}: Project) {
   return (
-    <Card>
-      <CardContent className="flex flex-col">
-        <div className="mb-4 flex-shrink-0">
-          <CardTitle className="text-xl mb-3">{project.title}</CardTitle>
-          <p className="text-muted-foreground mb-3 leading-relaxed">
-            {project.description}
-          </p>
-          <div className="flex flex-wrap gap-2 mb-3">
-            {project.technologies.map((tech) => (
-              <Badge key={tech} variant="outline" className="text-xs">
-                {tech}
-              </Badge>
-            ))}
+    <div className="flex flex-col gap-4 h-full group">
+      <div className="aspect-video w-full overflow-hidden">
+        {youtubeId ? (
+          <iframe
+            src={`https://www.youtube.com/embed/${youtubeId}`}
+            title={title}
+            className="w-full h-full"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        ) : customImage ? (
+          <div
+            className="w-full h-full cursor-pointer relative"
+            onClick={href ? () => window.open(href, "_blank") : undefined}
+          >
+            <img
+              src={customImage}
+              alt={title}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
           </div>
-          {project.href && (
-            <Button variant="outline" size="sm" className="w-fit" asChild>
-              <a href={project.href} target="_blank" rel="noreferrer">
-                View on GitHub
-              </a>
-            </Button>
-          )}
+        ) : (
+          <div
+            className="w-full  h-full cursor-pointer relative"
+            onClick={href ? () => window.open(href, "_blank") : undefined}
+          ></div>
+        )}
+      </div>
+
+      <div className="flex flex-col flex-1 gap-3">
+        <div className="flex items-start justify-between gap-4">
+          <h3 className="text-xl font-semibold tracking-tight">{title}</h3>
+          <div className="flex gap-1 shrink-0">
+            {link && (
+              <Button
+                variant="ghost"
+                size="icon"
+                className="h-8 w-8 text-muted-foreground hover:text-foreground"
+                asChild
+              >
+                <a
+                  href={link}
+                  target="_blank"
+                  rel="noreferrer"
+                  title="Visit Website"
+                >
+                  <Globe className="h-4 w-4" />
+                </a>
+              </Button>
+            )}
+            {href && (
+              <Button
+                variant="ghost"
+                size="icon"
+                className="h-8 w-8 text-muted-foreground hover:text-foreground"
+                asChild
+              >
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  title="View Code"
+                >
+                  <Github className="h-4 w-4" />
+                </a>
+              </Button>
+            )}
+          </div>
         </div>
 
-        {/* Bottom - Media (standard aspect ratio) */}
-        <div className="aspect-video">
-          {project.youtubeId ? (
-            <div className="bg-muted rounded-lg relative overflow-hidden group w-full h-full">
-              <iframe
-                src={`https://www.youtube.com/embed/${project.youtubeId}`}
-                title={project.title}
-                className="w-full h-full rounded-lg"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-          ) : project.customImage ? (
-            <div
-              className="bg-muted rounded-lg relative overflow-hidden group w-full h-full cursor-pointer"
-              onClick={
-                project.href
-                  ? () => window.open(project.href, "_blank")
-                  : undefined
-              }
-            >
-              <img
-                src={project.customImage}
-                alt={project.title}
-                className="w-full h-full object-cover rounded-lg"
-                loading="lazy"
-              />
-            </div>
-          ) : (
-            <div
-              className="bg-muted rounded-lg relative overflow-hidden group w-full h-full cursor-pointer"
-              onClick={
-                project.href
-                  ? () => window.open(project.href, "_blank")
-                  : undefined
-              }
-            >
-              <div
-                className={`absolute inset-0 flex items-center justify-center bg-gradient-to-br ${project.gradientFrom} ${project.gradientTo}`}
-              >
-                <IconComponent className={`w-20 h-20 ${project.iconColor}`} />
-              </div>
-            </div>
-          )}
+        <p className="text-muted-foreground leading-relaxed line-clamp-3">
+          {description}
+        </p>
+
+        <div className="mt-auto pt-2 flex flex-wrap gap-2">
+          {technologies.map((tech) => (
+            <Badge key={tech} className="px-2.5 py-0.5 font-normal">
+              {tech}
+            </Badge>
+          ))}
         </div>
-      </CardContent>
-    </Card>
+      </div>
+    </div>
   );
 }

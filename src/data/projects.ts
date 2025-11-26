@@ -1,6 +1,4 @@
-import type { Project } from "@/components/project-card";
-
-export const projects: Project[] = [
+export const projects = [
   {
     id: "stride",
     title: "Stride",
@@ -9,23 +7,21 @@ export const projects: Project[] = [
     technologies: ["ElectronJS", "TypeScript", "React", "Lexical"],
     type: "demo",
     icon: "play",
-    gradientFrom: "from-emerald-50",
-    gradientTo: "to-green-100 dark:from-emerald-900/20 dark:to-green-800/20",
     iconColor: "text-emerald-500",
     youtubeId: "XPzxfn-JzOI",
+    link: "https://get-stride.com/docs",
   },
   {
     id: "shenko-ai",
     title: "Shenko AI",
     description:
-      "An AI assistant tailored towards the structural engineering field",
+      "An AI assistant tailored towards the structural engineering field.",
     technologies: ["AI SDK", "Python", "Typescript", "NEXT JS"],
     type: "demo",
     icon: "play",
-    gradientFrom: "from-purple-50",
-    gradientTo: "to-violet-100 dark:from-purple-900/20 dark:to-violet-800/20",
     iconColor: "text-purple-500",
     youtubeId: "9GODaWLucRY",
+    link: "https://shenko.ai",
   },
   {
     id: "aws-room-booking",
@@ -35,8 +31,6 @@ export const projects: Project[] = [
     technologies: ["AWS CDK", "TypeScript", "React", "MySQL"],
     type: "demo",
     icon: "play",
-    gradientFrom: "from-blue-50",
-    gradientTo: "to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20",
     iconColor: "text-blue-400",
     youtubeId: "fr-xWYn6R74",
   },
@@ -49,10 +43,10 @@ export const projects: Project[] = [
     technologies: [],
     type: "portfolio",
     icon: "github",
-    gradientFrom: "from-gray-50",
-    gradientTo: "to-gray-100 dark:from-gray-900/20 dark:to-gray-800/20",
     iconColor: "text-gray-500",
     href: "https://github.com/orelbn",
     customImage: "/orel-github.png",
   },
 ];
+
+export type Project = (typeof projects)[number];

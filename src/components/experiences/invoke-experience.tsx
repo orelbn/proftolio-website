@@ -9,27 +9,26 @@ export function InvokeExperience() {
     >
       <div className="space-y-2">
         <p>
-          Gained experience working with live streaming technologies. Focused on
-          improving platform functionality and user experience.
+          I gained hands-on experience with live streaming technologies,
+          focusing on improving both platform functionality and the user
+          experience. While working with highly talented designers, project
+          managers, and fellow developers.
         </p>
         <p>
-          I resolved a critical synchronization bug where livestream
-          perspectives would drift out of sync, degrading the live experience
-          quality. This was after an event where we got user feedback and I
-          observed the synchronization issue myself, soon after I started
-          investigating. I quickly realized that due to network latency and
-          varying processing times, the timestamps can drift apart over time for
-          the different perspectives.
+          One highlight was resolving a critical synchronization bug where
+          livestream perspectives would slowly drift out of sync, degrading the
+          live experience. After an event, we received user feedback, and I
+          noticed the issue myself while watching, so I started digging in. I
+          realized that with network latency and varying processing times, the
+          timestamps for each perspective gradually drift apart.
         </p>
         <p>
           To fix this, I implemented a synchronization mechanism that
           periodically checks and adjusts the timestamps of each perspective
-          based on a master clock. This involved calculating the time difference
-          between each perspective and the master clock, then applying small
-          adjustments to keep them in sync. I did allow for some tolerance to
-          avoid constant adjustments that could lead to jittery playback. After
-          deploying the fix, the next event ran smoothly without any
-          synchronization issues, significantly enhancing the user experience.
+          against a master clock. That meant calculating the time difference for
+          each perspective and applying small, controlled adjustments to bring
+          them back in sync, while allowing some tolerance to avoid jittery
+          playback. After deploying the fix, the next event ran super smoothly.
         </p>
       </div>
     </ExperienceCard>

@@ -45,7 +45,7 @@ export const projects = [
     icon: "github",
     iconColor: "text-gray-500",
     href: "https://github.com/orelbn",
-    customImage: "/orel-github.png",
+    customImage: "/orel-github.webp",
   },
 ];
 

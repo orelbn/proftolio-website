@@ -84,7 +84,7 @@ export function ProjectCard({
           </div>
         </div>
 
-        <p className="text-muted-foreground leading-relaxed line-clamp-3">
+        <p className="text-foreground leading-relaxed line-clamp-3">
           {description}
         </p>
 

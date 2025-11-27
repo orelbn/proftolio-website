@@ -15,7 +15,7 @@ export function StrideExperience() {
           prototypes; I designed reliable fullstack products that followed best
           software development practices and conventions. Include single
           responsibility principle, automated testing, continuous integration
-          and deployment, security best practices as outline by OWASP, and
+          and deployment, security best practices as outlined by OWASP, and
           keeping up with the latest technology and software practices.
         </p>
         <p>

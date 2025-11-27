@@ -16,8 +16,8 @@ export function ExperienceCard({
 }: ExperienceCardProps) {
   return (
     <Card className="py-6 border-2 shadow-lg transition-all hover:border-primary/20">
-      <CardContent>
-        <div className="flex flex-col sm:flex-row justify-between items-start gap-2">
+      <CardContent className="space-y-4">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:gap-2">
           <div className="space-y-1">
             <h4 className="font-bold text-lg text-foreground drop-shadow-sm tracking-tight">
               {title}

@@ -33,7 +33,7 @@ export function HeroSocials() {
           <TooltipTrigger asChild>
             <Button className="rounded-full" size="icon" asChild>
               <a
-                href="https://linkedin.com/in/orel-ben-neriah-401590216"
+                href="https://linkedin.com/in/orelbn"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="LinkedIn"

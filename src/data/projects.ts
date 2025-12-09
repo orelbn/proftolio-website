@@ -21,7 +21,6 @@ export const projects = [
     icon: "play",
     iconColor: "text-purple-500",
     youtubeId: "9GODaWLucRY",
-    link: "https://shenko.ai",
   },
   {
     id: "aws-room-booking",

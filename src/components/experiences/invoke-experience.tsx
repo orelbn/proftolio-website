@@ -3,6 +3,7 @@ import { ExperienceCard } from "../experience-card";
 export function InvokeExperience() {
   return (
     <ExperienceCard
+      value="invoke"
       title="Web Developer Co-op"
       company="Invoke Co."
       duration="Sep 2022 - Dec 2022"

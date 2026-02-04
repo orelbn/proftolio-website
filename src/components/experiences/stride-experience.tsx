@@ -3,6 +3,7 @@ import { ExperienceCard } from "../experience-card";
 export function StrideExperience() {
   return (
     <ExperienceCard
+      value="stride"
       title="Co-founder & CTO"
       company="Stride Software Inc."
       duration="May 2024 - Sep 2025"

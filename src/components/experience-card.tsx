@@ -1,7 +1,12 @@
+import {
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
 
 type ExperienceCardProps = {
+  value: string;
   title: string;
   company: string;
   duration: string;
@@ -9,32 +14,43 @@ type ExperienceCardProps = {
 };
 
 export function ExperienceCard({
+  value,
   title,
   company,
   duration,
   children,
 }: ExperienceCardProps) {
   return (
-    <Card className="py-6 border-2 shadow-lg transition-all hover:border-primary/20">
-      <CardContent className="space-y-4">
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:gap-2">
-          <div className="space-y-1">
-            <h4 className="font-bold text-lg text-foreground drop-shadow-sm tracking-tight">
+    <AccordionItem
+      value={value}
+      className="group/experience relative px-6 border-2 rounded-2xl bg-card shadow-sm transition-all hover:border-primary/20 data-open:border-primary/30 data-open:shadow-md"
+    >
+      <AccordionTrigger className="flex flex-1 items-start justify-between py-6 hover:no-underline gap-4">
+        <div className="flex flex-col items-start gap-1 text-left flex-1">
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+            <h4 className="font-semibold text-base text-foreground tracking-tight">
               {title}
             </h4>
-            <p className="font-medium text-muted-foreground -translate-y-2">
-              {company}
-            </p>
+            <Badge
+              variant="outline"
+              className="hidden sm:inline-flex text-[10px] font-semibold text-muted-foreground border-muted-foreground/20 uppercase tracking-wider"
+            >
+              {duration}
+            </Badge>
           </div>
-          <Badge variant="secondary" className="text-sm px-3 py-1 shadow-sm">
+          <p className="text-sm font-medium text-muted-foreground">{company}</p>
+          <Badge
+            variant="outline"
+            className="mt-2 sm:hidden text-[10px] font-semibold text-muted-foreground border-muted-foreground/20 uppercase tracking-wider"
+          >
             {duration}
           </Badge>
         </div>
+      </AccordionTrigger>
 
-        <div className="text-foreground leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.1)] dark:drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
-          {children}
-        </div>
-      </CardContent>
-    </Card>
+      <AccordionContent className="pb-6">
+        <div className="text-foreground leading-relaxed">{children}</div>
+      </AccordionContent>
+    </AccordionItem>
   );
 }

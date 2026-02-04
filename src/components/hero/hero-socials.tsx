@@ -12,17 +12,23 @@ export function HeroSocials() {
     <TooltipProvider>
       <div className="flex justify-center items-center space-x-4">
         <Tooltip>
-          <TooltipTrigger asChild>
-            <Button className="rounded-full" size="icon" asChild>
-              <a
-                href="https://github.com/orelbn"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="GitHub"
-              >
-                <Github className="w-5 h-5" />
-              </a>
-            </Button>
+          <TooltipTrigger
+            render={
+              <Button
+                className="rounded-full"
+                size="icon"
+                render={
+                  <a
+                    href="https://github.com/orelbn"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="GitHub"
+                  />
+                }
+              />
+            }
+          >
+            <Github className="w-5 h-5" />
           </TooltipTrigger>
           <TooltipContent>
             <p>Checkout my GitHub</p>
@@ -30,17 +36,23 @@ export function HeroSocials() {
         </Tooltip>
 
         <Tooltip>
-          <TooltipTrigger asChild>
-            <Button className="rounded-full" size="icon" asChild>
-              <a
-                href="https://linkedin.com/in/orelbn"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-            </Button>
+          <TooltipTrigger
+            render={
+              <Button
+                className="rounded-full"
+                size="icon"
+                render={
+                  <a
+                    href="https://linkedin.com/in/orelbn"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="LinkedIn"
+                  />
+                }
+              />
+            }
+          >
+            <Linkedin className="w-5 h-5" />
           </TooltipTrigger>
           <TooltipContent>
             <p>Connect with me on Linkedin</p>

@@ -52,16 +52,16 @@ export function ProjectCard({
                 variant="ghost"
                 size="icon"
                 className="h-8 w-8 text-muted-foreground hover:text-foreground"
-                asChild
+                render={
+                  <a
+                    href={link}
+                    target="_blank"
+                    rel="noreferrer"
+                    title="Visit Website"
+                  />
+                }
               >
-                <a
-                  href={link}
-                  target="_blank"
-                  rel="noreferrer"
-                  title="Visit Website"
-                >
-                  <Globe className="h-4 w-4" />
-                </a>
+                <Globe className="h-4 w-4" />
               </Button>
             )}
             {href && (
@@ -69,16 +69,16 @@ export function ProjectCard({
                 variant="ghost"
                 size="icon"
                 className="h-8 w-8 text-muted-foreground hover:text-foreground"
-                asChild
+                render={
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noreferrer"
+                    title="View Code"
+                  />
+                }
               >
-                <a
-                  href={href}
-                  target="_blank"
-                  rel="noreferrer"
-                  title="View Code"
-                >
-                  <Github className="h-4 w-4" />
-                </a>
+                <Github className="h-4 w-4" />
               </Button>
             )}
           </div>

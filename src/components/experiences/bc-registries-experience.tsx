@@ -3,6 +3,7 @@ import { ExperienceCard } from "../experience-card";
 export function BCRegistriesExperience() {
   return (
     <ExperienceCard
+      value="bc-registries"
       title="Application Developer Co-op"
       company="BC Registries (Service BC)"
       duration="May 2023 - Aug 2023"

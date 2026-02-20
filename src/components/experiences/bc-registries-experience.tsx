@@ -21,10 +21,9 @@ export function BCRegistriesExperience() {
           to hit the ground running relatively quickly. I learned Vue.js, which
           was fun because up to that point I was mainly using React. Vue was
           very intuitive and I liked the way that there was more built-in state
-          management manage as in comparsion to React. I also enjoyed how you
-          can declare your styling in the same file as your component, and that
-          they already had standard global context library that you can opt
-          into.
+          management as in comparison to React. I also enjoyed how you can
+          declare your styling in the same file as your component, and that they
+          already had standard global context library that you can opt into.
         </p>
         <p>
           I was lucky to be part of a great team. We had project managers, UI

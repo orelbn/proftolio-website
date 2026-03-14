@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import type { Project } from "@/data/projects";
+import { getSafeExternalUrl } from "@/lib/safe-url";
 import { Github, Globe } from "lucide-react";
 
 export function ProjectCard({
@@ -12,6 +13,9 @@ export function ProjectCard({
   href,
   link,
 }: Project) {
+  const safeHref = getSafeExternalUrl(href);
+  const safeLink = getSafeExternalUrl(link);
+
   return (
     <div className="flex flex-col gap-4 h-full group">
       <div className="aspect-video w-full overflow-hidden">
@@ -24,22 +28,41 @@ export function ProjectCard({
             allowFullScreen
           />
         ) : customImage ? (
-          <div
-            className="w-full h-full cursor-pointer relative"
-            onClick={href ? () => window.open(href, "_blank") : undefined}
-          >
+          safeHref ? (
+            <a
+              href={safeHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full h-full cursor-pointer relative"
+              aria-label={`Open ${title} in a new tab`}
+            >
+              <img
+                src={customImage}
+                alt={title}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+              />
+            </a>
+          ) : (
             <img
               src={customImage}
               alt={title}
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               loading="lazy"
             />
-          </div>
+          )
         ) : (
-          <div
-            className="w-full  h-full cursor-pointer relative"
-            onClick={href ? () => window.open(href, "_blank") : undefined}
-          ></div>
+          safeHref ? (
+            <a
+              href={safeHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full h-full cursor-pointer relative"
+              aria-label={`Open ${title} in a new tab`}
+            />
+          ) : (
+            <div className="w-full h-full relative" />
+          )
         )}
       </div>
 
@@ -47,7 +70,7 @@ export function ProjectCard({
         <div className="flex items-start justify-between gap-4">
           <h3 className="text-xl font-semibold tracking-tight">{title}</h3>
           <div className="flex gap-1 shrink-0">
-            {link && (
+            {safeLink && (
               <Button
                 nativeButton={false}
                 variant="ghost"
@@ -55,9 +78,9 @@ export function ProjectCard({
                 className="h-8 w-8 text-muted-foreground hover:text-foreground"
                 render={
                   <a
-                    href={link}
+                    href={safeLink}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     title="Visit Website"
                   />
                 }
@@ -65,7 +88,7 @@ export function ProjectCard({
                 <Globe className="h-4 w-4" />
               </Button>
             )}
-            {href && (
+            {safeHref && (
               <Button
                 nativeButton={false}
                 variant="ghost"
@@ -73,9 +96,9 @@ export function ProjectCard({
                 className="h-8 w-8 text-muted-foreground hover:text-foreground"
                 render={
                   <a
-                    href={href}
+                    href={safeHref}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     title="View Code"
                   />
                 }

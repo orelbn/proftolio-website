@@ -14,8 +14,7 @@ export const projects = [
   {
     id: "shenko-ai",
     title: "Shenko AI",
-    description:
-      "An AI assistant tailored towards the structural engineering field.",
+    description: "An AI assistant tailored towards the structural engineering field.",
     technologies: ["AI SDK", "Python", "Typescript", "NEXT JS"],
     type: "demo",
     icon: "play",

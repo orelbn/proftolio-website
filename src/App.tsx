@@ -1,4 +1,3 @@
-import { ExperienceSection } from "@/components/experience-section";
 import { HeroSection } from "@/components/hero-section";
 import { ModeToggle } from "@/components/mode-toggle";
 import { ProjectsCarousel } from "@/components/projects-carousel";
@@ -18,8 +17,6 @@ export default function App() {
           <HeroSection />
           <Separator />
           <ProjectsCarousel />
-          <Separator />
-          <ExperienceSection />
         </main>
 
         <SiteFooter />

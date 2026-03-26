@@ -4,9 +4,7 @@ const app = new Hono<{ Bindings: Env }>();
 const HTML_NONCE_PLACEHOLDER = "__NONCE__";
 
 function createNonce() {
-  return btoa(
-    String.fromCharCode(...crypto.getRandomValues(new Uint8Array(16))),
-  );
+  return btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(16))));
 }
 
 function buildContentSecurityPolicy(nonce: string) {

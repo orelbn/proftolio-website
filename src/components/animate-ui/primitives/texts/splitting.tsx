@@ -35,9 +35,7 @@ type LinesSplittingTextProps = DefaultSplittingTextProps & {
   text: string[];
 };
 
-type SplittingTextProps =
-  | CharsOrWordsSplittingTextProps
-  | LinesSplittingTextProps;
+type SplittingTextProps = CharsOrWordsSplittingTextProps | LinesSplittingTextProps;
 
 const SplittingText: React.FC<SplittingTextProps> = ({
   ref,
@@ -61,8 +59,7 @@ const SplittingText: React.FC<SplittingTextProps> = ({
     visible: {
       transition: {
         delayChildren: delay / 1000,
-        staggerChildren:
-          stagger ?? (type === "chars" ? 0.05 : type === "words" ? 0.2 : 0.3),
+        staggerChildren: stagger ?? (type === "chars" ? 0.05 : type === "words" ? 0.2 : 0.3),
       },
     },
   };
@@ -75,14 +72,11 @@ const SplittingText: React.FC<SplittingTextProps> = ({
     },
   };
 
-  const { ref: localRef, isInView } = useIsInView(
-    ref as React.Ref<HTMLElement>,
-    {
-      inView,
-      inViewOnce,
-      inViewMargin,
-    },
-  );
+  const { ref: localRef, isInView } = useIsInView(ref as React.Ref<HTMLElement>, {
+    inView,
+    inViewOnce,
+    inViewMargin,
+  });
 
   if (Array.isArray(text)) {
     return (
@@ -95,10 +89,7 @@ const SplittingText: React.FC<SplittingTextProps> = ({
       >
         {text.map((line, i) => (
           <React.Fragment key={`line-${i}`}>
-            <motion.span
-              variants={itemVariants}
-              style={{ display: "inline-block" }}
-            >
+            <motion.span variants={itemVariants} style={{ display: "inline-block" }}>
               {line}
             </motion.span>
             {i < text.length - 1 ? <br /> : null}

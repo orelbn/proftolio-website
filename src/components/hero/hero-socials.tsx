@@ -1,11 +1,5 @@
 import { Button } from "@/components/ui/button";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-import { Github, Linkedin } from "lucide-react";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 export function HeroSocials() {
   return (
@@ -29,7 +23,7 @@ export function HeroSocials() {
               />
             }
           >
-            <Github className="w-5 h-5" />
+            <img src="/GitHub_Invertocat_White.svg" alt="" aria-hidden="true" className="h-5 w-5" />
           </TooltipTrigger>
           <TooltipContent>
             <p>Checkout my GitHub</p>
@@ -54,7 +48,12 @@ export function HeroSocials() {
               />
             }
           >
-            <Linkedin className="w-5 h-5" />
+            <img
+              src="/InBug-White.png"
+              alt=""
+              aria-hidden="true"
+              className="h-5 w-5 object-contain"
+            />
           </TooltipTrigger>
           <TooltipContent>
             <p>Connect with me on Linkedin</p>

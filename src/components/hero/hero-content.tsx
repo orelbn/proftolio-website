@@ -9,9 +9,7 @@ export function HeroContent() {
         gradient="linear-gradient(90deg, var(--primary) 0%, var(--secondary) 20%, var(--accent) 50%, var(--secondary) 80%, var(--primary) 100%)"
         className="text-5xl font-bold"
       />
-      <p className="text-2xl font-light text-muted-foreground">
-        Fullstack Software Developer
-      </p>
+      <p className="text-2xl font-light text-muted-foreground">Fullstack Software Developer</p>
 
       <div className="relative mx-auto max-w-2xl">
         <SplittingText
@@ -35,9 +33,9 @@ export function HeroContent() {
         />
       </div>
       <p className="max-w-2xl mx-auto text-foreground text-balance pt-4">
-        With a background in Criminology and Computer Science, I bring a unique
-        perspective to tech. When I'm not coding, you'll find me running,
-        lifting weights, playing soccer, or brewing a great cup of coffee.
+        With a background in Criminology and Computer Science, I bring a unique perspective to tech.
+        When I'm not coding, you'll find me running, lifting weights, playing soccer, or brewing a
+        great cup of coffee.
       </p>
     </div>
   );

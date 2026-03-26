@@ -2,7 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import type { Project } from "@/data/projects";
 import { getSafeExternalUrl } from "@/lib/safe-url";
-import { Github, Globe } from "lucide-react";
+import { Globe } from "lucide-react";
 
 export function ProjectCard({
   youtubeId,
@@ -51,18 +51,16 @@ export function ProjectCard({
               loading="lazy"
             />
           )
+        ) : safeHref ? (
+          <a
+            href={safeHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full h-full cursor-pointer relative"
+            aria-label={`Open ${title} in a new tab`}
+          />
         ) : (
-          safeHref ? (
-            <a
-              href={safeHref}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full h-full cursor-pointer relative"
-              aria-label={`Open ${title} in a new tab`}
-            />
-          ) : (
-            <div className="w-full h-full relative" />
-          )
+          <div className="w-full h-full relative" />
         )}
       </div>
 
@@ -95,23 +93,21 @@ export function ProjectCard({
                 size="icon"
                 className="h-8 w-8 text-muted-foreground hover:text-foreground"
                 render={
-                  <a
-                    href={safeHref}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="View Code"
-                  />
+                  <a href={safeHref} target="_blank" rel="noopener noreferrer" title="View Code" />
                 }
               >
-                <Github className="h-4 w-4" />
+                <img
+                  src="/GitHub_Invertocat_White.svg"
+                  alt=""
+                  aria-hidden="true"
+                  className="h-4 w-4"
+                />
               </Button>
             )}
           </div>
         </div>
 
-        <p className="text-foreground leading-relaxed line-clamp-3">
-          {description}
-        </p>
+        <p className="text-foreground leading-relaxed line-clamp-3">{description}</p>
 
         <div className="mt-auto pt-2 flex flex-wrap gap-2">
           {technologies.map((tech) => (

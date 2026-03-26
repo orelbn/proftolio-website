@@ -1,36 +1,31 @@
-import { GradientText } from "@/components/animate-ui/primitives/texts/gradient";
-import { SplittingText } from "@/components/animate-ui/primitives/texts/splitting";
-
 export function HeroContent() {
   return (
     <div className="space-y-2">
-      <GradientText
-        text="Orel Ben Neriah"
-        gradient="linear-gradient(90deg, var(--primary) 0%, var(--secondary) 20%, var(--accent) 50%, var(--secondary) 80%, var(--primary) 100%)"
-        className="text-5xl font-bold"
-      />
+      <h1
+        className="text-5xl font-bold text-transparent bg-clip-text"
+        style={{
+          backgroundImage:
+            "linear-gradient(90deg, var(--primary) 0%, var(--secondary) 20%, var(--accent) 50%, var(--secondary) 80%, var(--primary) 100%)",
+        }}
+      >
+        Orel Ben Neriah
+      </h1>
       <p className="text-2xl font-light text-muted-foreground">Fullstack Software Developer</p>
 
       <div className="relative mx-auto max-w-2xl">
-        <SplittingText
-          text="Focused on Security, Performance, and Maintainability."
+        <p
           aria-hidden="true"
           className="block text-lg text-center text-muted/20 select-none text-balance"
-          disableAnimation
-          highlightRegex={/Security|Performance|Maintainability/}
-          highlightClassName="font-bold"
-        />
-        <SplittingText
-          text="Focused on Security, Performance, and Maintainability."
-          className="block text-lg text-center text-muted-foreground absolute inset-0 text-balance"
-          type="chars"
-          inView
-          initial={{ y: 0, opacity: 0, x: 0, filter: "blur(10px)" }}
-          animate={{ y: 0, opacity: 1, x: 0, filter: "blur(0px)" }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
-          highlightRegex={/Security|Performance|Maintainability/}
-          highlightClassName="text-foreground font-bold"
-        />
+        >
+          Focused on <span className="font-bold">Security</span>,{" "}
+          <span className="font-bold">Performance</span>, and{" "}
+          <span className="font-bold">Maintainability</span>.
+        </p>
+        <p className="absolute inset-0 block text-lg text-center text-muted-foreground text-balance">
+          Focused on <span className="text-foreground font-bold">Security</span>,{" "}
+          <span className="text-foreground font-bold">Performance</span>, and{" "}
+          <span className="text-foreground font-bold">Maintainability</span>.
+        </p>
       </div>
       <p className="max-w-2xl mx-auto text-foreground text-balance pt-4">
         With a background in Criminology and Computer Science, I bring a unique perspective to tech.

@@ -9,8 +9,7 @@ export function HeroSocials() {
           <TooltipTrigger
             render={
               <Button
-                className="rounded-full"
-                size="icon"
+                className="rounded-full size-10"
                 nativeButton={false}
                 render={
                   <a
@@ -34,8 +33,7 @@ export function HeroSocials() {
           <TooltipTrigger
             render={
               <Button
-                className="rounded-full"
-                size="icon"
+                className="rounded-full size-10"
                 nativeButton={false}
                 render={
                   <a

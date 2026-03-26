@@ -12,9 +12,12 @@
     }
   ],
   "compilerOptions": {
-    "types": ["./worker-configuration.d.ts"],
+    "target": "ESNext",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true
   }
 }

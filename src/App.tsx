@@ -1,6 +1,6 @@
 import { HeroSection } from "@/components/hero-section";
 import { ModeToggle } from "@/components/mode-toggle";
-import { ProjectsCarousel } from "@/components/projects-carousel";
+import { ProjectsSection } from "@/components/projects-section";
 import { SiteFooter } from "@/components/site-footer";
 import { Separator } from "@/components/ui/separator";
 import { ThemeProvider } from "@/hooks/theme-provider";
@@ -16,7 +16,7 @@ export default function App() {
         <main className="max-w-6xl mx-auto px-6 pt-16 space-y-6">
           <HeroSection />
           <Separator />
-          <ProjectsCarousel />
+          <ProjectsSection />
         </main>
 
         <SiteFooter />

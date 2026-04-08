@@ -1,48 +1,45 @@
 export const projects = [
   {
+    id: "ore-ai",
+    title: "Ore AI",
+    description:
+      "A conversational agent built around my own interests and hobbies. It has a distinct personality and can invoke tools that render visual UIs directly in the conversation.",
+    technologies: [
+      "React 19",
+      "TanStack Router",
+      "Cloudflare Workers",
+      "AI SDK",
+      "Drizzle ORM",
+      "Better Auth",
+      "MCP",
+    ],
+    href: "https://github.com/orelbn/ore-ai-web",
+    liveHref: "https://oreai.orelbn.ca/",
+    customImage: "/oreai-preview.webp",
+  },
+  {
     id: "stride",
     title: "Stride",
     description:
-      "Desktop application for engineering calculations and documentation that handles large-context state management and implements a custom graph-based algorithm for efficient handling of calculations.",
+      "Built with ElectronJS and React, using Lexical as the rich-text editor framework. State flows through a custom graph-based model that resolves calculation dependencies in order.",
     technologies: ["ElectronJS", "TypeScript", "React", "Lexical"],
-    type: "demo",
-    icon: "play",
-    iconColor: "text-emerald-500",
-    youtubeId: "XPzxfn-JzOI",
+    videoSrc: "/stride-demo.mp4",
   },
   {
     id: "shenko-ai",
     title: "Shenko AI",
-    description: "An AI assistant tailored towards the structural engineering field.",
-    technologies: ["AI SDK", "Python", "Typescript", "NEXT JS"],
-    type: "demo",
-    icon: "play",
-    iconColor: "text-purple-500",
-    youtubeId: "9GODaWLucRY",
+    description:
+      "Built with Next.js and TypeScript on the frontend, with a Python backend. Integrates the Vercel AI SDK and scopes the model context toward structural engineering queries.",
+    technologies: ["AI SDK", "Python", "TypeScript", "Next.js"],
+    customImage: "/shenko-ai-demo.gif",
   },
   {
     id: "aws-room-booking",
     title: "AWS Room Booking System",
     description:
-      "Led technical development of a meeting room booking system for a team of 8. Built with full-stack AWS infrastructure including CDK, Lambda, and RDS.",
+      "Full-stack on AWS using CDK to provision Lambda, API Gateway, and an RDS MySQL database. Frontend is React with TypeScript.",
     technologies: ["AWS CDK", "TypeScript", "React", "MySQL"],
-    type: "demo",
-    icon: "play",
-    iconColor: "text-blue-400",
-    youtubeId: "fr-xWYn6R74",
-  },
-
-  {
-    id: "more-projects",
-    title: "More Projects",
-    description:
-      "View all my projects on GitHub including YogaVision (🥇 hackathon winner), easyWriting, SpeechScript, navigatr, and CodeBank.",
-    technologies: [],
-    type: "portfolio",
-    icon: "github",
-    iconColor: "text-gray-500",
-    href: "https://github.com/orelbn",
-    customImage: "/orel-github.webp",
+    videoSrc: "/aws-room-booking-demo.mp4",
   },
 ];
 

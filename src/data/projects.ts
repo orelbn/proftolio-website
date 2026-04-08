@@ -1,4 +1,15 @@
-export const projects = [
+export type Project = {
+  id: string;
+  title: string;
+  description: string;
+  technologies: string[];
+  mediaType: "image" | "video";
+  mediaSrc: string;
+  href?: string;
+  liveHref?: string;
+};
+
+export const projects: Project[] = [
   {
     id: "ore-ai",
     title: "Ore AI",
@@ -15,7 +26,8 @@ export const projects = [
     ],
     href: "https://github.com/orelbn/ore-ai-web",
     liveHref: "https://oreai.orelbn.ca/",
-    customImage: "/oreai-preview.webp",
+    mediaType: "image",
+    mediaSrc: "/oreai-preview.webp",
   },
   {
     id: "stride",
@@ -23,7 +35,8 @@ export const projects = [
     description:
       "Built with ElectronJS and React, using Lexical as the rich-text editor framework. State flows through a custom graph-based model that resolves calculation dependencies in order.",
     technologies: ["ElectronJS", "TypeScript", "React", "Lexical"],
-    videoSrc: "/stride-demo.mp4",
+    mediaType: "video",
+    mediaSrc: "/stride-demo.mp4",
   },
   {
     id: "shenko-ai",
@@ -31,7 +44,8 @@ export const projects = [
     description:
       "Built with Next.js and TypeScript on the frontend, with a Python backend. Integrates the Vercel AI SDK and scopes the model context toward structural engineering queries.",
     technologies: ["AI SDK", "Python", "TypeScript", "Next.js"],
-    customImage: "/shenko-ai-demo.gif",
+    mediaType: "image",
+    mediaSrc: "/shenko-ai-demo.gif",
   },
   {
     id: "aws-room-booking",
@@ -39,8 +53,7 @@ export const projects = [
     description:
       "Full-stack on AWS using CDK to provision Lambda, API Gateway, and an RDS MySQL database. Frontend is React with TypeScript.",
     technologies: ["AWS CDK", "TypeScript", "React", "MySQL"],
-    videoSrc: "/aws-room-booking-demo.mp4",
+    mediaType: "video",
+    mediaSrc: "/aws-room-booking-demo.mp4",
   },
 ];
-
-export type Project = (typeof projects)[number];

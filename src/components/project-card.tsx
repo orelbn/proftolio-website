@@ -5,8 +5,8 @@ import type { Project } from "@/data/projects";
 import { getSafeExternalUrl } from "@/lib/safe-url";
 
 export function ProjectCard({
-  videoSrc,
-  customImage,
+  mediaType,
+  mediaSrc,
   description,
   technologies,
   title,
@@ -33,13 +33,7 @@ export function ProjectCard({
         <ProjectActions liveHref={safeLiveHref} codeHref={safeHref} />
       </div>
 
-      <ProjectMedia
-        videoSrc={videoSrc}
-        customImage={customImage}
-        title={title}
-        primaryHref={safeLiveHref}
-        fallbackHref={safeHref}
-      />
+      <ProjectMedia mediaType={mediaType} mediaSrc={mediaSrc} title={title} />
     </article>
   );
 }

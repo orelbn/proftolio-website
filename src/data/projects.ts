@@ -3,6 +3,7 @@ export type Project = {
   title: string;
   description: string;
   technologies: string[];
+  featuredTechnologies?: string[];
   mediaType: "image" | "video";
   mediaSrc: string;
   href?: string;
@@ -14,9 +15,9 @@ export const projects: Project[] = [
     id: "ore-ai",
     title: "Ore AI",
     description:
-      "A conversational agent built around my own interests and hobbies. It has a distinct personality and can invoke tools that render visual UIs directly in the conversation.",
+      "A personal conversational agent with a distinct personality, built around my interests, routines, projects, and favourite places.",
     technologies: [
-      "React 19",
+      "React",
       "TanStack Router",
       "Cloudflare Workers",
       "AI SDK",
@@ -24,6 +25,7 @@ export const projects: Project[] = [
       "Better Auth",
       "MCP",
     ],
+    featuredTechnologies: ["AI", "TanStack Start", "Cloudflare", "MCP"],
     href: "https://github.com/orelbn/ore-ai-web",
     liveHref: "https://oreai.orelbn.ca/",
     mediaType: "image",
@@ -33,7 +35,7 @@ export const projects: Project[] = [
     id: "stride",
     title: "Stride",
     description:
-      "Built with ElectronJS and React, using Lexical as the rich-text editor framework. State flows through a custom graph-based model that resolves calculation dependencies in order.",
+      "A desktop workspace for structured notes and calculations, designed to modernize and improve how engineers document and reason through their work.",
     technologies: ["ElectronJS", "TypeScript", "React", "Lexical"],
     mediaType: "video",
     mediaSrc: "/stride-demo.mp4",
@@ -42,8 +44,8 @@ export const projects: Project[] = [
     id: "shenko-ai",
     title: "Shenko AI",
     description:
-      "Built with Next.js and TypeScript on the frontend, with a Python backend. Integrates the Vercel AI SDK and scopes the model context toward structural engineering queries.",
-    technologies: ["AI SDK", "Python", "TypeScript", "Next.js"],
+      "A domain-focused assistant for structural engineering questions, helping users explore technical concepts with context-aware responses.",
+    technologies: ["Next.js", "TypeScript", "Python", "AI Agent"],
     mediaType: "image",
     mediaSrc: "/shenko-ai-demo.gif",
   },
@@ -51,8 +53,8 @@ export const projects: Project[] = [
     id: "aws-room-booking",
     title: "AWS Room Booking System",
     description:
-      "Full-stack on AWS using CDK to provision Lambda, API Gateway, and an RDS MySQL database. Frontend is React with TypeScript.",
-    technologies: ["AWS CDK", "TypeScript", "React", "MySQL"],
+      "A room booking platform for checking availability, reserving shared spaces, and managing booking records through a simple web interface.",
+    technologies: ["AWS", "Serverless", "MySQL", "React"],
     mediaType: "video",
     mediaSrc: "/aws-room-booking-demo.mp4",
   },

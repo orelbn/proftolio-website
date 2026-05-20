@@ -10,8 +10,7 @@ export function FeaturedProjects() {
             Featured Projects
           </h2>
           <p className="text-pretty text-lg text-foreground/65 dark:text-foreground/75">
-            A few projects across conversational agents, desktop tooling, domain-specific AI, and
-            cloud infrastructure.
+            A few projects across desktop tooling, domain-specific AI, and cloud infrastructure.
           </p>
         </div>
         {projects.map((project) => (

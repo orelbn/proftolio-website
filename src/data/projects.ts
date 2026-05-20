@@ -11,26 +11,26 @@ export type Project = {
 };
 
 export const projects: Project[] = [
-  {
-    id: "ore-ai",
-    title: "Ore AI",
-    description:
-      "A personal conversational agent with a distinct personality, built around my interests, routines, projects, and favourite places.",
-    technologies: [
-      "React",
-      "TanStack Router",
-      "Cloudflare Workers",
-      "AI SDK",
-      "Drizzle ORM",
-      "Better Auth",
-      "MCP",
-    ],
-    featuredTechnologies: ["AI", "TanStack Start", "Cloudflare", "MCP"],
-    href: "https://github.com/orelbn/ore-ai-web",
-    liveHref: "https://oreai.orelbn.ca/",
-    mediaType: "image",
-    mediaSrc: "/oreai-preview.webp",
-  },
+  // {
+  //   id: "ore-ai",
+  //   title: "Ore AI",
+  //   description:
+  //     "A personal conversational agent with a distinct personality, built around my interests, routines, projects, and favourite places.",
+  //   technologies: [
+  //     "React",
+  //     "TanStack Router",
+  //     "Cloudflare Workers",
+  //     "AI SDK",
+  //     "Drizzle ORM",
+  //     "Better Auth",
+  //     "MCP",
+  //   ],
+  //   featuredTechnologies: ["AI", "TanStack Start", "Cloudflare", "MCP"],
+  //   href: "https://github.com/orelbn/ore-ai-web",
+  //   liveHref: "https://oreai.orelbn.ca/",
+  //   mediaType: "image",
+  //   mediaSrc: "/oreai-preview.webp",
+  // },
   {
     id: "stride",
     title: "Stride",
